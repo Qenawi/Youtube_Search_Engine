@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <carbon.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/carbon_black_54"
+        app:carbon_cornerRadius="5dp"
+        android:layout_margin="3dp"
+        app:carbon_rippleColor="@color/carbon_red_500"
+        android:layout_width="match_parent"
+        app:carbon_elevation="@dimen/carbon_elevationCard"
+        android:layout_height="wrap_content">
+    <carbon.widget.ImageView
+            android:layout_width="150dp"
+            android:id="@+id/thump"
+            android:layout_margin="5dp"
+            tools:src="@color/carbon_lightBlue_500"
+            android:layout_height="150dp"
+            app:carbon_cornerRadius="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <carbon.widget.TextView
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            tools:text="vedioTitle"
+            android:textColor="@color/carbon_green_300"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/thump"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"/>
+    <carbon.widget.TextView
+            android:id="@+id/desc"
+            android:textColor="@color/carbon_white"
+            android:textSize="13sp"
+            tools:text="descreption DumDum"
+            app:layout_constraintStart_toEndOf="@+id/thump"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/thump"
+            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintVertical_bias="0.0"/>
+</carbon.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="match_parent">
+    <carbon.widget.EditText
+            android:text="Bodtty"
+            android:padding="5dp"
+            android:textSize="14sp"
+            android:gravity="center|start"
+            android:textColor="@color/carbon_colorBackground_dark"
+            android:id="@+id/search_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+    <carbon.widget.Button android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Search"
+                          android:layout_margin="3dp"
+                          android:background="@android:color/white"
+                          android:textColor="@android:color/holo_orange_dark"
+                          app:layout_constraintTop_toBottomOf="@+id/search_query"
+                          android:id="@+id/search"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="0dp"
+            android:id="@+id/swipe_layout"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp" app:layout_constraintTop_toBottomOf="@+id/search">
+        <carbon.widget.RecyclerView
+                app:carbon_elevation="@dimen/carbon_elevationCard"
+                android:layout_width="match_parent"
+                android:id="@+id/search_rv"
+                android:layout_height="match_parent"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</carbon.widget.ConstraintLayout>
